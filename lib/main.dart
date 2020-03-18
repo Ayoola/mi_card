@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal.shade600,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50,
@@ -36,48 +37,41 @@ class MyApp extends StatelessWidget {
                   fontSize: 16.0,
                 ),
               ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal.shade600,
-                    ),
-                    SizedBox(
-                      width: 30.0,
-                    ),
-                    Text(
-                      '+1 (713) 894-8591',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
                 ),
               ),
-              Container(
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.mail,
-                      color: Colors.teal.shade600,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal.shade600,
+                  ),
+                  title: Text(
+                    '+1 (713) 894-8591',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
                     ),
-                    SizedBox(
-                      width: 30.0,
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.teal.shade600,
+                  ),
+                  title: Text(
+                    'aj@ayoolajohn.com',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
                     ),
-                    Text(
-                      'aj@ayoolajohn.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
